@@ -28,27 +28,71 @@
 // //     return a%2 == 0;
 // // }
 
+// fn main(){
+//     let is_number = 91;
+
+//     let is_even = is_evens(is_number);
+
+//     if is_even {
+//         println!("{} it is even number" , is_number);
+//     }else{
+//         println!("it is odd number");
+//     }
+
+//     print_loop();
+// }
+
+// fn print_loop(){
+//     for i in 1..10 {
+//         println!("{} " , i);
+//     }
+// }
+
+
+// fn is_evens(number:u32) -> bool{
+//     return number%2 == 0;
+// }
+
+
+// fn main(){
+
+//     // everything in rust is immutable to make it mutbale add "mut" keyword
+//     let mut x = 10;
+//     x=11;
+
+//     println!("{}" , x);
+
+//     let mut name = String::from("Hello");
+
+//     name.push_str(" world");
+
+//     println!("{}" , name)
+// }
+
+
+
+// fn main(){
+//     create_str();
+
+// }
+
+// fn create_str(){
+//     let name = String::from("Anoop");
+
+//     let name2 = name; //if here name2 = name the original name poiting to its value in heap is deallocated and its new owner is name
+
+//     println!("{}", name); //ownership rule
+// }
+
+
 fn main(){
-    let is_number = 91;
+    let name = String::from("Anoop");
+    let length = str_length(name);
+    println!("{}" , length);
 
-    let is_even = is_evens(is_number);
-
-    if is_even {
-        println!("{} it is even number" , is_number);
-    }else{
-        println!("it is odd number");
-    }
-
-    print_loop();
+    println!("{}",name); //in here this would throw error as in function call we pass in name to s variable as owner and as per its rule when function call ended its value got dropped
 }
 
-fn print_loop(){
-    for i in 1..10 {
-        println!("{} " , i);
-    }
-}
-
-
-fn is_evens(number:u32) -> bool{
-    return number%2 == 0;
+fn str_length(s:String) ->usize{
+    return s.len();
 }
