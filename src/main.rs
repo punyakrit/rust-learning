@@ -87,12 +87,13 @@
 
 fn main(){
     let name = String::from("Anoop");
-    let length = str_length(name);
+    // let name1 = name.clone();
+    let (length, name) = str_length(name);
     println!("{}" , length);
 
     println!("{}",name); //in here this would throw error as in function call we pass in name to s variable as owner and as per its rule when function call ended its value got dropped
 }
 
-fn str_length(s:String) ->usize{
-    return s.len();
+fn str_length(s:String) ->(usize, String){
+    return (s.len(), s);
 }
