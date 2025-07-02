@@ -105,7 +105,7 @@
 // fn main(){
 //     let text = String::from("Random");
 //     let text2 = &text; //text2 saves address of string instead text transfering ownership of string
-
+//     let text3 = &text;
 //     println!("{}", text);
 //     println!("{}", text2);
 // }
@@ -123,3 +123,39 @@
 //     // s.push_str("sddsd");
 //     println!("{}" , s);
 // }
+
+
+// Mutable references
+
+// fn main(){
+//     let mut s = String::from("Hello ");
+//     call_mut(&mut s);
+//     println!("{}" ,s);
+// }
+
+// fn call_mut(s: &mut String){
+//     s.push_str(" world");
+//     println!("{}", s);
+// }
+
+// -> one owner to string
+// -> one owner -> -> multiple references
+// -> one mutable owner can have only one mutable references not more than that
+
+
+// Struct in Rust
+
+use rect::Rect;
+pub mod rect;
+
+fn main(){
+    let r = Rect{
+        weight : 10.0,
+        height:10.0
+    };
+    println!("{} {}" , r.height , r.weight);
+    println!("{}" ,r.area() );
+    Rect::print_something();
+
+
+}
