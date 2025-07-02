@@ -85,15 +85,41 @@
 // }
 
 
-fn main(){
-    let name = String::from("Anoop");
-    // let name1 = name.clone();
-    let (length, name) = str_length(name);
-    println!("{}" , length);
+// fn main(){
+//     let name = String::from("Anoop");
+//     // let name1 = name.clone();
+//     let (length, name) = str_length(name);
+//     println!("{}" , length);
 
-    println!("{}",name); //in here this would throw error as in function call we pass in name to s variable as owner and as per its rule when function call ended its value got dropped
-}
+//     println!("{}",name); //in here this would throw error as in function call we pass in name to s variable as owner and as per its rule when function call ended its value got dropped
+// }
 
-fn str_length(s:String) ->(usize, String){
-    return (s.len(), s);
-}
+// fn str_length(s:String) ->(usize, String){
+//     return (s.len(), s);
+// }
+
+
+
+//References
+
+// fn main(){
+//     let text = String::from("Random");
+//     let text2 = &text; //text2 saves address of string instead text transfering ownership of string
+
+//     println!("{}", text);
+//     println!("{}", text2);
+// }
+
+
+//borrow
+
+// fn main(){
+//     let s = String::from("no");
+//     borrow_call(&s);
+//     println!("Borrowed call {}" , s);
+// }
+
+// fn borrow_call(s: &String){
+//     // s.push_str("sddsd");
+//     println!("{}" , s);
+// }
