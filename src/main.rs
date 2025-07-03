@@ -145,17 +145,42 @@
 
 // Struct in Rust
 
-use rect::Rect;
-pub mod rect;
+// use rect::Rect;
+// pub mod rect;
 
-fn main(){
-    let r = Rect{
-        weight : 10.0,
-        height:10.0
-    };
-    println!("{} {}" , r.height , r.weight);
-    println!("{}" ,r.area() );
-    Rect::print_something();
+// fn main(){
+//     let r = Rect{
+//         weight : 10.0,
+//         height:10.0
+//     };
+//     println!("{} {}" , r.height , r.weight);
+//     println!("{}" ,r.area() );
+//     Rect::print_something();
 
 
-}
+// }
+
+
+
+//Enums
+// enum  Direction {
+//     North,
+//     South,
+//     East,
+//     West
+// }
+
+// fn main(){
+//     let direction= Direction::East;
+//     steer(direction);
+// }
+
+// fn steer(dir: Direction){
+//     match dir {
+//         Direction::North => println!("North"),
+//         Direction::South => println!("South"),
+//         // Direction::East => println!("East"),
+//         Direction::West => println!("West"),
+//         _=>println!("NONE"),
+//     }
+// }
