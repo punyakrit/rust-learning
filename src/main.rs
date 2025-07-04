@@ -184,3 +184,43 @@
 //         _=>println!("NONE"),
 //     }
 // }
+
+
+// enums with values
+
+// use std::f32::consts::PI;
+
+// enum Shape{
+//     Square(f32),
+//     Circle(f32),
+//     Rectangle(f32,f32)
+// }
+
+// fn main(){
+//     let shape_square = Shape::Square(10.0);
+//     let shape_circle = Shape::Circle(10.0);
+//     println!("{}",shape_area(shape_square));
+// }
+
+// fn shape_area(s: Shape) -> f32 {
+//     return match s {
+//         Shape::Circle(side) => PI * side * side,
+//         Shape::Square(side) => side * side,
+//         _=>println!("NoNe")
+//     }
+
+// }
+
+// Error handling in rust
+
+// use std::fs;
+
+// fn main(){
+//     let file_read = fs::read_to_string("a.txt");
+
+//     match file_read {
+//         Ok( t)=> {println!("{}" , t)},
+//         Err(error) => {println!("{}", error)}
+
+//     }
+// }
